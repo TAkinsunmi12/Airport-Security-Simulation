@@ -7,6 +7,11 @@ MU = 1       # service per minute per lane (μ)
 C = 4        # number of lanes (c)
 T_END = 60   # minutes to simulate
 
+# --- Passenger Entity  ---
+class Passenger:
+    def __init__(self, arrival_time):
+        self.arrival_time = arrival_time
+
 def exp_time(rate):
     return -math.log(random.random()) / rate
 
